@@ -86,12 +86,15 @@ public with sharing class VariablesDataTypesOperators {
      * Example: isEven(2) should return true
      * This concept is not specifically covered in the content this week, but you can use the Math class and the modulus function to understand if the number is even or odd.
      * The modulus function returns the remainder of a division operation, think about how you can use this to determine if a number is even or odd. 
-     * Resources: https://developer.salesforce.com/docs/atlas.en-us.apexref.meta/apexref/apex_methods_system_math.htm#apex_System_Math_mod
+     * Resources: https://developer.salesforce.com/docs/atlas.en-us.apexref.meta/apexref/apex_methods_system_math.htm#apex_System_Math_mod 
      * @param num The number to check.
      * @return True if the number is even, False otherwise.
      */
     public static Boolean isEven(Integer num) {
-        return null; // Replace null with the variable you used to store the result
+        if (math.mod(num,2) == 0) {
+            return true;
+        }
+        return false; // Replace null with the variable you used to store the result
     }
 
     /**
